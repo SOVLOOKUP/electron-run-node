@@ -8,7 +8,7 @@ export const runNode = async (argv: string[], options?: Options<"utf8">) => {
         argv[0] = rp(argv[0])
     }
     if (existsSync(argv[0])) {
-        return execa(process.argv.at(0)!, [join(__dirname, "../loader.js"), ...argv], options)
+        return await execa(process.argv.at(0)!, [join(__dirname, "../loader.js"), ...argv], options)
     } else {
         throw new Error("module not found")
     }

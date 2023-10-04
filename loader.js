@@ -1,0 +1,1 @@
+process.argv.splice(1, 1); require(process.argv.at(1)); require("electron").app.quit()

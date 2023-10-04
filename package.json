@@ -1,0 +1,32 @@
+{
+  "name": "electron-run-node",
+  "version": "0.0.1",
+  "description": "run node scripts in electron",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "electron test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "electron": "^26.2.4"
+  },
+  "dependencies": {
+    "execa": "^8.0.1"
+  },
+  "tsup": {
+    "entry": [
+      "index.ts"
+    ],
+    "format": [
+      "cjs"
+    ],
+    "clean": true,
+    "dts": true
+  }
+}

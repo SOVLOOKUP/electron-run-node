@@ -1,7 +1,6 @@
 import type { ExecaReturnValue, Options } from "execa"
 import { existsSync } from "fs"
-import { resolve as rp } from "path"
-import { isAbsolute, join } from "path"
+import { resolve as rp, isAbsolute, join } from "path"
 
 export const runNode = (argv: string[], options?: Options<"utf8">) => new Promise<ExecaReturnValue>(async (resolve, reject) => {
     const { execa } = await import("execa")
